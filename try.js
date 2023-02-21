@@ -1,6 +1,6 @@
 var map = L.map("map").setView([52.8, 18], 4);
 //var imageOverlay = L.imageOverlay(imageUrl,options);
-
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
 L.tileLayer('https://github.com/poseidonND/CHL/raw/main/gridsat/gridsat/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
