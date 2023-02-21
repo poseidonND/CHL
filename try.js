@@ -12,7 +12,7 @@ L.tileLayer('https://github.com/poseidonND/CHL/raw/main/gridsat/gridsat/{z}/{x}/
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     format: 'image/png',
-    transparent:true,}).addTo(map);
+    transparent:false,}).addTo(map);
 // var nexrad = L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
 //     layers: 'nexrad-n0r-900913',
 //     format: 'image/png',
