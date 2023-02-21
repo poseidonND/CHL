@@ -11,7 +11,7 @@ var osm = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?a
 L.tileLayer('https://github.com/poseidonND/CHL/raw/main/gridsat/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    transparent: true
+    format:'image/jpg',
     }).addTo(map);
 // var nexrad = L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
 //     layers: 'nexrad-n0r-900913',
