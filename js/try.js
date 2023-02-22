@@ -1,6 +1,21 @@
-var map = L.map("map").setView([52.8, 18], 4);
+//var map = L.map("map").setView([52.8, 18], 4);
         // Base layers
         //  .. OpenStreetMap
+var osm = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 10,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1
+}).addTo(map);
+var map = L.map('map', {
+        center: [25.027607447969586, -90.00850432226032],
+            zoom: 10,
+            minZoom: 1,
+            maxZoom: 10,
+            layers: [osm]
+        });
 var osm = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 10,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -13,13 +28,7 @@ var osm = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?a
 var lyr = L.tileLayer('https://github.com/poseidonND/CHL/raw/main/{z}/{x}/{y}.png', {tms: true, opacity: 0.7, attribution: ""});
 
         // Map
-        // var map = L.map('map', {
-            // center: [25.027607447969586, -90.00850432226032],
-            // zoom: 10,
-            // minZoom: 1,
-            // maxZoom: 10,
-            // layers: [osm]
-        // });
+
 var basemaps = {"OpenStreetMap": osm}
 var overlaymaps = {"Layer": lyr}
    
