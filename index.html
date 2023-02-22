@@ -36,48 +36,14 @@
 
         <div id="map"></div>
 
-        <script>
+        <script src="https://github.com/poseidonND/CHL/raw/main/try.js">
         /* **** Leaflet **** */
 
         // Base layers
         //  .. OpenStreetMap
         var osm = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
 
-        //  .. CartoDB Positron
-        //var cartodb = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'});
-
-        //  .. OSM Toner
-        //var toner = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'});
-
-        //  .. White background
-        //var white = L.tileLayer("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAAA1BMVEX///+nxBvIAAAAH0lEQVQYGe3BAQ0AAADCIPunfg43YAAAAAAAAAAA5wIhAAAB9aK9BAAAAABJRU5ErkJggg==");
-
-        // Overlay layers (TMS)
-        var lyr = L.tileLayer('https://github.com/poseidonND/CHL/raw/main/{z}/{x}/{y}.png', {tms: true, opacity: 0.7, attribution: ""});
-
-        // Map
-        var map = L.map('map', {
-            center: [25.027607447969586, -90.00850432226032],
-            zoom: 10,
-            minZoom: 1,
-            maxZoom: 10,
-            layers: [osm]
-        });
-
-        var basemaps = {"OpenStreetMap": osm}
-        var overlaymaps = {"Layer": lyr}
-
-        // Title
-       
-        // Note
         
-       
-        // Add base layers
-        L.control.layers(basemaps, overlaymaps, {collapsed: false}).addTo(map);
-
-        // Fit to overlay bounds (SW and NE points with (lat, lon))
-        map.fitBounds([[15.055214895939162, -70.01700864452066], [35.000000000000014, -109.99999999999999]]);
-
         </script>
 
         </body>
