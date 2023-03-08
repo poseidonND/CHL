@@ -27,7 +27,7 @@ function initDemoMap(){
 
     var layerControl = L.control.layers(baseLayers);
     layerControl.addTo(map);
-    map.setView([-98.58, 39.82], 2);
+    map.setView([39.0, -98.0], 2);
 	
     return {
         map: map,
@@ -40,7 +40,7 @@ var mapStuff = initDemoMap();
 var map = mapStuff.map;
 var layerControl = mapStuff.layerControl;
 
-// load data (u, v grids) from somewhere (e.g. https://github.com/danwild/wind-js-server)
+// load data (u, v grids) 
 
 $.getJSON('wind-global.json', function (data) {
 
