@@ -27,7 +27,7 @@ function initDemoMap(){
 
     var layerControl = L.control.layers(baseLayers);
     layerControl.addTo(map);
-    map.setView([39.0, -98.0], 2);
+    map.setView([-22, 150], 2);
 	
     return {
         map: map,
